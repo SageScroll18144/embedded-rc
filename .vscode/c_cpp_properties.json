@@ -12,7 +12,9 @@
                 "${workspaceFolder}/PID/src/mbed-os/drivers/include",
                 "${workspaceFolder}/PID/src/mbed-os/**",
                 "${workspaceFolder}/PID/src/mbed-os/targets/TARGET_Cypress/TARGET_PSOC6/mtb-pdl-cat1/cmsis/include",
-                "${workspaceFolder}/PID/src/mbed-os/targets/TARGET_NXP/TARGET_LPC176X/device"
+                "${workspaceFolder}/PID/src/mbed-os/targets/TARGET_NXP/TARGET_LPC176X/device",
+                "/home/lypess/.platformio/packages/framework-mbed/UNITTESTS/target_h",
+                "/home/lypess/.platformio/packages/framework-mbed/UNITTESTS/target_h"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang-13",
