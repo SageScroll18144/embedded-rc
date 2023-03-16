@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/PID/src/mbed-os/platform/include",
+                "${workspaceFolder}/PID/src/mbed-os/hal/tests/UNITTESTS/doubles",
+                "${workspaceFolder}/PID/src/mbed-os/hal/include",
+                "${workspaceFolder}/PID/src/mbed-os/platform/include/platform",
+                "${workspaceFolder}/PID/src/mbed-os/platform/include/platform",
+                "${workspaceFolder}/PID/src/mbed-os/drivers/include",
+                "${workspaceFolder}/PID/src/mbed-os/**",
+                "${workspaceFolder}/PID/src/mbed-os/targets/TARGET_Cypress/TARGET_PSOC6/mtb-pdl-cat1/cmsis/include",
+                "${workspaceFolder}/PID/src/mbed-os/targets/TARGET_NXP/TARGET_LPC176X/device"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang-13",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}
