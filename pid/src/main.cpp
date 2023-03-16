@@ -3,7 +3,7 @@
 #define IDEAL 100
 
 //pins
-// DigitalOut led(p21);
+DigitalOut led(D5);
 
 //Var
 const int Kp = 1;
@@ -38,5 +38,8 @@ int main() {
     P = proporcional(0);
     I = integral(0, 0);
     if(0>0) D = derivative(0, 0);
+
+    led.write(!led.read());
+    wait_us(100);
   }
 }
