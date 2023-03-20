@@ -1,32 +1,7 @@
 #include "mbed.h"
-
-#define IDEAL 100
-
+#include "PID.h"
 //pins
-DigitalOut led(D5);
-
-//Var
-const double Kp = 1;
-const double Ki = 1;
-const double Kd = 1;
-
-double sum = 0;
-double last_error = 0;
-
-double proporcional(double curr_point){
-  return Kp * (IDEAL - curr_point);
-}
-
-double integral(double curr_point){
-  sum += (IDEAL - curr_point);
-  return Ki * sum;
-}
-
-double derivative(double curr_point, double dt){
-  double derivative = ((IDEAL - curr_point) - last_error) / dt;
-  last_error = (IDEAL - curr_point);
-  return Kd * derivative;
-}
+DigitalOut led(PTC0);
 
 int main() {
   
@@ -41,7 +16,7 @@ int main() {
 
     PID = P + I + D;
 
-    PID = PID / 4; //A leitura é de 10bits, mas a saida de 4bits!
+    // PID = PID / 4; //A leitura é de 10bits, mas a saida de 4bits!
 
     led.write(!led.read());
     wait_us(100);
@@ -49,6 +24,6 @@ int main() {
 }
 
 /*
-  Obs: Erro talvez será simulado internamente, o robo recebe a distancia e é calculado internamente o quanto foi percorrido, assim o erro é o parametro inicial decrescido do calculo de deslocamento
+  Obs: Erro talvez será simulado internamente, o robo recebe a velocidade e é calculado internamente o quanto foi percorrido, assim o erro é o parametro inicial decrescido da velocidade atual
 
 */
